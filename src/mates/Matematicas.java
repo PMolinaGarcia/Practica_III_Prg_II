@@ -41,14 +41,14 @@ public class Matematicas {
      * realizará el cálculo sustituyendo la variable que hayamos escrito por dardosDentro.
      */
 
-    public static double generarNumeroPiExprLambda(long pasos, DoubleUnaryOperator funcion){
+    public static double generarNumeroPiExprLambda(double pasos, DoubleUnaryOperator funcion){
 
         long dardosDentro = 0;
 
         for (int j = 0; j<pasos; j++){
             dardosDentro+=generarPuntoAleatorio();
         }
-            return funcion.applyAsDouble(dardosDentro);
+        return funcion.applyAsDouble(dardosDentro);
 
     }
 }
