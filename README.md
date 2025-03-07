@@ -1,4 +1,4 @@
-# Practica_III_Prg_II
+# Práctica III
 
 ## Descripción del contenido de este repositorio
 
