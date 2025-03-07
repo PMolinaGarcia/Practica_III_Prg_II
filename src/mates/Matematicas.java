@@ -10,7 +10,7 @@ import java.util.stream.*;
 public class Matematicas {
 
     /**
-     * Método para generar puntos aleatorios:
+     * Método para generar puntos aleatorios.
      * <p>
      * En primer lugar, se definen las variables coordenadaX y coordenadaY,
      * que son las que tendrá cada punto generado y cuyos valores serán aleatorios;
@@ -33,11 +33,11 @@ public class Matematicas {
     }
 
     /**
-     * Método funcional para calcular el número pi a partir de los puntos generados:
+     * Método funcional para calcular el número pi a partir de los puntos generados.
      * <p>
      *
      * @param pasos Es el parámetro numérico que indica la cantidad de puntos totales con los que queremos trabajar.
-     * @param funcion Es el parámetro de tipo DoubleUnaryOperator que indica la funcion con la que se van a realizar los cálculos.
+     * @param funcion Es el parámetro de tipo DoubleUnaryOperator que indica la función con la que se van a realizar los cálculos.
      * @return Retornamos la aplicación de la función, que, según la que hayamos pasado como parámetros,
      * realizará el cálculo sustituyendo la variable que hayamos escrito por dardosDentro.
      */
