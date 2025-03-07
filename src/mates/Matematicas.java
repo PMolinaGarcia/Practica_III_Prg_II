@@ -1,6 +1,7 @@
 package mates;
 
 import java.util.function.*;
+import java.util.stream.*;
 
 
 /**
@@ -41,13 +42,10 @@ public class Matematicas {
      * realizará el cálculo sustituyendo la variable que hayamos escrito por dardosDentro.
      */
 
-    public static double generarNumeroPiExprLambda(double pasos, DoubleUnaryOperator funcion){
+    public static double generarNumeroPiExprLambda(long pasos, DoubleUnaryOperator funcion){
 
-        long dardosDentro = 0;
+        int dardosDentro = IntStream.generate(()->generarPuntoAleatorio()).limit(pasos).reduce((num1, num2) -> num1 + num2).orElse(0);
 
-        for (int j = 0; j<pasos; j++){
-            dardosDentro+=generarPuntoAleatorio();
-        }
         return funcion.applyAsDouble(dardosDentro);
 
     }
