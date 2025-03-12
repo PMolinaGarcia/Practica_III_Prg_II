@@ -37,16 +37,17 @@ public class Matematicas {
      * <p>
      *
      * @param pasos Es el parámetro numérico que indica la cantidad de puntos totales con los que queremos trabajar.
-     * @param funcion Es el parámetro de tipo DoubleUnaryOperator que indica la función con la que se van a realizar los cálculos.
-     * @return Retornamos la aplicación de la función, que, según la que hayamos pasado como parámetros,
-     * realizará el cálculo sustituyendo la variable que hayamos escrito por dardosDentro.
+     * Generamos un número de tipo long que nos indique los dardos que hay dentro del círculo imaginario. Para ello,
+     * utilizaremos un IntStream que, mediante expresión lambda, llama a la función generarPuntoAleatorio, limitándola
+     * al número de pasos y devolviendo, de este stream, la suma de los números.
+     * @return Retornamos el cálculo del número PI, que resultará en un valor de tipo double.
      */
 
-    public static double generarNumeroPiExprLambda(long pasos, DoubleUnaryOperator funcion){
+    public static double generarNumeroPiExprLambda(long pasos){
 
-        int dardosDentro = IntStream.generate(()->generarPuntoAleatorio()).limit(pasos).reduce((num1, num2) -> num1 + num2).orElse(0);
+        long dardosDentro = IntStream.generate(()->generarPuntoAleatorio()).limit(pasos).reduce((num1, num2) -> num1 + num2).orElse(0);
 
-        return funcion.applyAsDouble(dardosDentro);
+        return (double) 4*dardosDentro/pasos;
 
     }
 }

@@ -12,7 +12,7 @@ public class Principal {
      */
     public static void main(String[] args){
         System.out.println("El numero PI es " +
-                Matematicas.generarNumeroPiExprLambda(Long.parseLong(args[0]), x -> 4.0*x/Double.parseDouble(args[0])));
+                Matematicas.generarNumeroPiExprLambda(Long.parseLong(args[0])));
     }
 }
 
